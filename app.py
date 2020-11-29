@@ -17,6 +17,7 @@ from helpers.score import calculate_score
 from helpers.io import load_data, write_response, load_responses
 
 app = Flask(__name__)
+app.debug = True
 logger = logging.getLogger('__main__')
 logging.basicConfig(filename='error.log', level=logging.DEBUG)
 logger.info('Logging configured')
@@ -31,13 +32,13 @@ def get_data():
         return jsonify({'questions': [r[1] for r in rows]}), 200
 
     if request.method == 'POST':
-        return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+        return jsonify({'answers': [(r[2]) for r in rows]}), 200
 
 
 @app.route("/submit/<id>/<response>", methods=['POST'])
 def submit_responses(id, response):
     r = {'id': id, 'response': response}
-    _ = write_response(r)
+    _ = str(write_response(r))
     return 'Submitted {}'.format(r), 200
 
 

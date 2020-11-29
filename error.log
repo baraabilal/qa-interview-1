@@ -1,0 +1,444 @@
+INFO:__main__:Logging configured
+INFO:__main__:Logging configured
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 16:58:34] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 16:58:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:31:02] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:36:16] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:39:30] "[37mGET /questions HTTP/1.1[0m" 200 -
+ERROR:qa-interview.app:Exception on /get_score [GET]
+Traceback (most recent call last):
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/qa-interview/app.py", line 49, in get_score
+    responses = load_responses()
+  File "./helpers/io.py", line 15, in load_responses
+    return {row[0]: row[1] for row in rows}
+  File "./helpers/io.py", line 15, in <dictcomp>
+    return {row[0]: row[1] for row in rows}
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:39:55] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:40:11] "[31m[1mGET /submit/%3Cid%3E/%3Cresponse%3E HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:46:48] "[31m[1mGET /submit/1/2 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:46:58] "[31m[1mGET /submit/2/3.5 HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:47:04] "[31m[1mGET /submit/3/4 HTTP/1.1[0m" 405 -
+ERROR:qa-interview.app:Exception on /get_score [GET]
+Traceback (most recent call last):
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/qa-interview/app.py", line 49, in get_score
+    responses = load_responses()
+  File "./helpers/io.py", line 15, in load_responses
+    return {row[0]: row[1] for row in rows}
+  File "./helpers/io.py", line 15, in <dictcomp>
+    return {row[0]: row[1] for row in rows}
+IndexError: list index out of range
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:47:17] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:47:28] "[37mGET /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:48:33] "[33mGET /questions/POST HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:48:36] "[33mGET /questions/GET HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:48:41] "[33mGET /questionsPOST HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:59:40] "[33mGET /get HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:59:42] "[33mGET /GET HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [29/Nov/2020 23:59:45] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:04:58] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:09:01] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:09:10] "[37mGET /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:11:03] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:11:22] "[37mGET /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:15:53] "[33mPOST / HTTP/1.1[0m" 404 -
+ERROR:qa-interview.app:Exception on /questions [POST]
+Traceback (most recent call last):
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in get_data
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in <listcomp>
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+ValueError: could not convert string to float: 'answer'
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:16:04] "[35m[1mPOST /questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:18:47] "[33mPOST / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:20:48] "[33mPOST / HTTP/1.1[0m" 404 -
+ERROR:qa-interview.app:Exception on /questions [POST]
+Traceback (most recent call last):
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in get_data
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in <listcomp>
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+ValueError: could not convert string to float: 'answer'
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:20:55] "[35m[1mPOST /questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:21:47] "[37mGET /questions HTTP/1.1[0m" 200 -
+ERROR:qa-interview.app:Exception on /questions [POST]
+Traceback (most recent call last):
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/user/miniconda3/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in get_data
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+  File "/Users/user/Desktop/qa-interview/app.py", line 34, in <listcomp>
+    return jsonify({'answers': [float(r[2]) for r in rows]}), 200
+ValueError: could not convert string to float: 'answer'
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:22:07] "[35m[1mPOST /questions HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:22:18] "[33mGET / HTTP/1.1[0m" 404 -
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:29:22] "[33mPOST / HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:29:55] "[35m[1mPOST /questions HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:37:30] "[37mPOST /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:39:18] "[37mPOST /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:39:44] "[37mPOST /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:17] "[37mPOST /submit/1/2 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:33] "[37mPOST /submit/2/3 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:39] "[37mPOST /submit/3/4 HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:40:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:41:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:45:43] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:46:28] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/score.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:46:50] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:48:39] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:48:48] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:49:31] "[37mPOST /questions HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:50:02] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:50:06] "[37mPOST /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:51:06] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:51:09] "[37mPOST /questions HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:52:02] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:52:03] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:52:05] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:52:28] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:52:43] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug: * Debugger PIN: 254-933-765
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:17] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'answer'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '3.5'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:53:54] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 254-933-765
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:56:14] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:12] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 00:59:13] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': 'e'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': 's'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:01:52] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:39] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:03:52] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:09] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:09] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:09] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:09] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:09] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:05:10] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:11] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[35m[1mGET /get_score HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:47] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:06:48] "[37mGET /get_score?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:07:00] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:07:15] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:07:25] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:08:05] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/score.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:09:16] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:09:49] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '1', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '3', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:10:04] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3.5', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '0', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:10:24] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/io.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3.5', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '0', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:10:36] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:werkzeug: * Detected change in '/Users/user/Desktop/qa-interview/helpers/score.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:__main__:Logging configured
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3.5', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '24', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:11:15] "[37mGET /get_score HTTP/1.1[0m" 200 -
+INFO:__main__:Logging configured
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3.5', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '24', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:18:19] "[37mGET /get_score HTTP/1.1[0m" 200 -
+DEBUG:helpers.score:{'response': '2', 'correct_answer': '2'}
+DEBUG:helpers.score:{'response': '3.5', 'correct_answer': '3.5'}
+DEBUG:helpers.score:{'response': '43', 'correct_answer': '24'}
+INFO:werkzeug:127.0.0.1 - - [30/Nov/2020 01:19:17] "[37mGET /get_score HTTP/1.1[0m" 200 -
